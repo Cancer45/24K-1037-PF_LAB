@@ -4,7 +4,5 @@ Not much to C at the moment\
 Hopefully that changes in the coming weeks\
 This is my *first repo, so progress will be slow\
 I'm learning\
-This is for class (Uni)\
-Oh, and here's an image,\
-![](https://github.com/Cancer45/Images/blob/main/ascii-art.png)
+This is for class (Uni) :(
 

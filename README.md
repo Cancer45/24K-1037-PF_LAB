@@ -6,5 +6,5 @@ This is my *first repo, so progress will be slow\
 I'm learning\
 This is for class (Uni)\
 Oh, and here's a picture,\
-![alt]([https://drive.google.com/file/d/18oNs5Oh3OituJ-ifvJu8vdZIGuTMoHc6/view?usp=drive_link](https://drive.google.com/file/d/18oNs5Oh3OituJ-ifvJu8vdZIGuTMoHc6/view?usp=drive_link))
+![alt]([https://drive.google.com/file/d/18oNs5Oh3OituJ-ifvJu8vdZIGuTMoHc6/view?usp=sharing](https://drive.google.com/file/d/18oNs5Oh3OituJ-ifvJu8vdZIGuTMoHc6/view?usp=drive_link))
 

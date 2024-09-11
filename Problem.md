@@ -3,7 +3,7 @@ START
 INPUT num
 
 IF num % 2 = 0 THEN\
-	PRINT "EVEN"
+	PRINT "EVEN"\
 ELSE
 	PRINT "ODD"
 

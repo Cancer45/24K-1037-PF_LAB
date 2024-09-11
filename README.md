@@ -7,3 +7,6 @@ Hi, welcome to this repo :)
 
 This is for class (Uni) :(
 
+<img src="https://github.com/Cancer45/24K-1037/blob/main/LAB2/awe.jpg" alt="hehe" width="550" height="550">
+
+

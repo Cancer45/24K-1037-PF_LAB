@@ -1,0 +1,19 @@
+// find max number
+
+START
+
+INPUT num1
+INPUT num2
+INPUT num3
+IF num1>num2 THEN
+	IF num1>num3 THEN
+		PRINT "num1 is max"
+	ELSE
+		PRINT "num3 is max"
+ELSE
+	IF num3>num2 THEN
+		PRINT "num3 is max"
+	ELSE
+		PRINT "num2 is max"
+END
+

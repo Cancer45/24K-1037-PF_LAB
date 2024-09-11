@@ -1,0 +1,35 @@
+//return month corresponding with number
+
+START
+
+INPUT num
+
+IF num < 1 OR num > 12
+	PRINT "number must be between 1 and 12"
+	END
+IF num = 1
+	PRINT "January" 
+IF num = 2
+	PRINT "February"
+IF num = 3
+	PRINT "March"
+IF num = 4
+	PRINT "April"
+IF num = 5
+	PRINT "May"	
+IF num = 6
+	PRINT "June"
+IF num = 7
+	PRINT "July" 
+IF num = 8
+	PRINT "August"	
+IF num = 9
+	PRINT "September"
+IF num = 10
+	PRINT "October" 
+IF num = 11
+	PRINT "November"	
+IF num = 12
+	PRINT "December"
+	
+END

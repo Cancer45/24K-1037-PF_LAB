@@ -1,0 +1,22 @@
+//check if divisible and if even or odd
+
+START
+
+INPUT dividend
+INPUT divisor
+
+IF dividend MOD divisor = 0
+	PRINT "dividend is divisible by divisor"
+	// didn't get what question meant by 'it' so did even/odd check for both divisor and quotient
+	SET quotient to (dividend / divisor)
+	IF divisor % 2 = 0
+		PRINT "divisor is even"
+	ELSE
+		PRINT "divisor is odd"
+	IF quotient % D2 = 0
+	 PRINT "quotient is even"
+	ELSE
+		PRINT "quotient is odd"
+ELSE
+	
+	END

@@ -1,0 +1,18 @@
+// add if '+' subtract if '-'
+
+START
+
+INPUT num1
+INPUT num2
+INPUT oPP
+
+IF oPP = '+' THEN
+	SET sum to num1 + num2
+ELSE
+	IF oPP = '-' THEN
+		SET sum to num1 - num2
+	ELSE
+		END
+PRINT sum
+
+END

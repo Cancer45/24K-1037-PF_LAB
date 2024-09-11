@@ -1,0 +1,10 @@
+START
+
+INPUT num
+
+IF num % 2 = 0
+	PRINT "EVEN"
+ELSE
+	PRINT "ODD"
+
+END

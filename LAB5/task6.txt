@@ -1,0 +1,12 @@
+x = 5 > 8 ? 10 : 1 != 2 < 5 ? 20 : 30;
+
+The above is false (overall), so output is 30.
+
+5 > 8
+The above is false, hence, x is not 10.
+
+2 < 5 takes precedence and is true (1).
+
+1 != 1 is false.
+
+Hence, output is 30

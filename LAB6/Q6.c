@@ -2,18 +2,28 @@
 
 int main() {
     
-      for (int i = 0; i < 5; i++)
+      // increase the value in the terminating condition to get multiple patterns
+      int row, col;
+      for (int i = 1; i <= 30; i++)
     {
-        if(i == 0 || i == 4)
+        row = (((i - 1) / 5) + 1);
+        col = i % 5;
+        
+        if((row % 5 == 1) && (col != 1 && col != 0))
         {
-            printf("*   *");  
+            printf("  ");
+           
         }
         
-      else
+        else
+        {
+          printf("* ");
+        }
+      
+      if (col == 0)
       {
-          printf("*****");
+          printf("\n");
       }
-      printf("\n");
     }
 
     return 0;

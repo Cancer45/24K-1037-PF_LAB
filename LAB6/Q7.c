@@ -4,7 +4,7 @@ int main() {
 
       // increase the value in the terminating condition to get multiple patterns
       int row, col, lett = 65;
-      for (int i = 1; i <= 200; i++)
+      for (int i = 1; i <= 30; i++)
     {
         // in-loop variables defined row and column
         row = (((i - 1)/ 5) + 1);

@@ -1,33 +1,33 @@
 #include <stdio.h>
 
 int main() {
-    
-    int n = 65, a = 67;
-      for (int i = 0; i < 5; i++)
-    {
-        if(i == 0 || i == 4)
+
+      // increase the value in the terminating condition to get multiple patterns
+      int row, col, lett = 65;
+      for (int i = 1; i <= 20; i++)
+      {
+        // in-loop variables defined row and column
+        row = (((i - 1)/ 5) + 1);
+        col = i % 5;
+        // lett when
+        if (((row % 5) == 1) || ((row == 2 || row == 4) && (col == 2 || col == 4)) || (row == 3 && col == 3))
         {
-            printf("%c %c %c %c %c", n, n + 1, n + 2, n + 3, n + 4);
-            n += 4;
-        }
-        
-        else if (i == 1 || i == 3)
-        {
-            printf("  ");
-            printf("%c", a);
-            printf("   ");
-            a += 3;
-            printf("%c", a);
-            a -= 1;
+            printf("%c ", lett);
         }
         
         else
         {
-            printf("    %c", n);
+            printf("  ");
         }
-        
-        printf("\n");
-    }
+       // newline and adjust lett value
+        if (col == 0)
+        {
+          printf("\n");
+        }
+      }
+      
+      // lett update
+      
 
     return 0;
 }

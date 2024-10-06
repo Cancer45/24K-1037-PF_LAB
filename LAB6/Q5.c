@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    
+
+      // increase the value in the terminating condition to get multiple patterns
       int row, col;
       for (int i = 1; i <= 30; i++)
     {

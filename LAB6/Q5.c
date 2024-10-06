@@ -4,9 +4,9 @@ int main() {
 
       // increase the value in the terminating condition to get multiple patterns
       int row, col;
-      for (int i = 1; i <= 30; i++)
+      for (int i = 1; i <= 40; i++)
     {
-        row = ((i / 5) + 1);
+        row = (((i - 1)/ 5) + 1);
         col = i % 5;
         
         if((row % 5) == 1 || col == 1 || col == 0)

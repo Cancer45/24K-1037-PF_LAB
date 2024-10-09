@@ -1,16 +1,17 @@
 #include <stdio.h>
 
 int main() {
-
+    
+      int row, rrow, col, lett = 65;
       // increase the value in the terminating condition to get multiple patterns
-      int row, col, lett = 65;
-      for (int i = 1; i <= 20; i++)
+      for (int i = 1; i <= 100; i++)
       {
         // in-loop variables defined row and column
-        row = (((i - 1)/ 5) + 1);
+        row = (((i - 1)/ 5));
+        rrow = row % 4;
         col = i % 5;
         // lett when
-        if (((row % 5) == 1) || ((row == 2 || row == 4) && (col == 2 || col == 4)) || (row == 3 && col == 3))
+        if ((rrow == 0) || ((rrow == 1 || rrow == 3) && (col == 2 || col == 4)) || (rrow == 2 && col == 3))
         {
             printf("%c ", lett);
         }
@@ -19,15 +20,32 @@ int main() {
         {
             printf("  ");
         }
-       // newline and adjust lett value
-        if (col == 0)
-        {
+       // newline and update lett value
+      if (col == 0)
+      {
+          if (rrow != 3)
+          {
+              lett -= (2 - rrow);
+          }
+          
+          else
+          {
+              lett -= 3;
+          }
+          
           printf("\n");
-        }
       }
       
-      // lett update
+      else if (col == 2 && (rrow == 1 || rrow == 3))
+      {
+          lett += 3;
+      }
       
-
+      else if (rrow == 0)
+      {
+          lett++;
+      }
+      }
+      
     return 0;
 }

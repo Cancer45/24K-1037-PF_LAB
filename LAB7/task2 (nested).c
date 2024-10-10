@@ -7,6 +7,8 @@ int main() {
     printf("Input String: ");
     scanf("%s", in);
     
+    // @SirMonis, u gave permission for nested :|
+    
     for (int i = 0; in [i] != '\0'; i++)
     {
         for (int j = 0; j < 5; j++)

@@ -32,7 +32,7 @@ int main() {
            count++;
        }
        
-       //end of array at 9, reset values
+       //end of array at 9, update count and indexes
        if(n == 9)
        {
            printf("frequency of %d is %d\n", input[m], count);

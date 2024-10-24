@@ -2,7 +2,7 @@
  
 int main() {
     
-    //init array
+    //init array ...and other things
     char input[100];
     int tmpnum, result = 0, length = 0, place = 1, num = 0;
     int check1, check2;

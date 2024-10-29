@@ -1,14 +1,24 @@
 #include <stdio.h>
 
+void hist (int input[]);
+
 int main() {
     
-    int input[10], large;
+    //take input
+    int input[10];
     for (int i = 0; i < 10; i++)
     {
         printf("input number %d: ", i + 1);
         scanf("%d", &input[i]);
     }
     
+    hist(input);
+    
+    return 0;
+}
+
+void hist (int input[])
+{
     //print horizontal
     for (int i = 0; i < 10; i++)
     {
@@ -20,7 +30,7 @@ int main() {
     }
     
     //largest value?
-    large = input[0];
+    int large = input[0];
     for (int i = 0; i < 10; i++)
     {
         if (input[i] > large)
@@ -42,5 +52,4 @@ int main() {
         }
         printf("\n");
     }
-    return 0;
 }

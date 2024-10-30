@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
+#include <ctype.h>
 
 // len global so funcs can access
 int len;
@@ -18,6 +19,7 @@ int main ()
 {
     int score, result;
     char input [100], box [6][5], roll[7];
+    printf("type 'endgame' to quit,\ntype 'end' or 'END' for new matrix\n");
     do
     {
         printf("input roll number(at least 4 characters): ");
@@ -28,12 +30,12 @@ int main ()
     {
         fill (roll, box);
         score = 0;
-        printf("\nSHUFFLED\n");
+        printf("SHUFFLED\n");
     do
     {
         printf("score: %d\n", score);
         print (box);
-        printf("input guess word (must be less than 6 letters): ");
+        printf("input guess word (at most 7 letters): ");
         scanf("%s", input);
         len = strlen(input);
 
@@ -50,10 +52,10 @@ int main ()
             return 0;
         }
 
-        //input exceeds array dimensions
-        if(len > 6)
+        //convert all to lower so input case doesn't matter
+        for (int i = 0; i < len; i++)
         {
-            continue;
+            input[i] = tolower(input[i]);
         }
 
         //search for input
@@ -109,6 +111,12 @@ void print (char box [][5])
 
 int search (char input [], char box [][5])
 {
+    //len check
+    if (len > 6)
+    {
+        return -1;
+    }
+
     //rows
     for (int i = 0; i < 6; i++)
     {
@@ -124,9 +132,9 @@ int search (char input [], char box [][5])
     //columns
     for (int i = 0; i < 5; i++)
     {
-        for (int j = 0; j < (6 - len); j++)
+        for (int j = 0; j < (7 - len); j++)
         {
-            if (check(input, &box[i][j], 1))
+            if (check(input, &box[j][i], 1))
             {
                 return 1; //true
             }
@@ -151,7 +159,7 @@ int check (char input [], char* tar, int dir) //tar is target, dir is direction
 
         //columns
         if (dir == 1)
-        {   
+        {
             tar += 5; //rows are 6 long, so adding 6 takes tar one column down
         }
     }

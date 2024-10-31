@@ -20,7 +20,7 @@ int main()
             
             else if (j > lim1 && j < lim2)
             {
-                if (j % 2 == 0)
+                if ((i % 2 == 0 && j % 2 == 0) || (i % 2 != 0 && j % 2 != 0))
                 {
                     arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j + 1]; 
                 }

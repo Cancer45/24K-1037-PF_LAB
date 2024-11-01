@@ -20,7 +20,7 @@ int main ()
         printf("\nenter move: ");
         input = getchar();
 
-        //if user returns c without entering char
+        //if user returns carr without entering char
         if (input == '\n')
         {
             continue;

@@ -11,13 +11,23 @@ int curr[2] = {0,0}, score = 0;
 int main ()
 {
     int t = 0;
+    char input;
     fill();
     printf("\npress 'w' for up, 's' for down, 'd' for right and 'a' for left\npress Enter to lock in your choice(ik ik, i wish it was non-canonical 2 :'()\npress 'q' to quit\n");
     while (t != 1)
-    {
+    { 
         print();
         printf("\nenter move: ");
-        t = update(getchar());
+        input = getchar();
+
+        //if user returns c without entering char
+        if (input == '\n')
+        {
+            continue;
+        }
+        
+        t = update(input);
+        getchar();
 
         if (t == -1)
         {
@@ -71,6 +81,11 @@ int update (char input)
     move[1] = input == 'd' ? 1:
     input == 'a' ? -1:
     0;
+
+    if (move[0] + move[1] == 0)
+    {
+        return 0;
+    }
 
     //news init
     new1 = curr[0] + move[0];

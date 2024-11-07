@@ -1,45 +1,46 @@
-// Online C compiler to run C program online
 #include <stdio.h>
 #include <string.h>
 
-int pal (char*);
+int pal (char[100]);
 
-int main() {
-    char input [5][20];
-    for (int i = 0; i < 5; i++)
+int main ()
+{
+    //declare
+    char in[5][100];
+    int no_words;
+    //input
+    printf("number of inputs: ");
+    scanf("%d", &no_words);
+    for (int i = 0; i < no_words; i++)
     {
-        printf ("input word number %d: ", i + 1);
-        scanf("%s", input[i]);
-        if (pal(&input[i][0]))
-        {
-                printf("'%s' is a palindrome\n", input[i]);
-        }
-        
-        else
-        {
-             printf("'%s' is not a palindrome\n", input[i]);
-        }
+        printf("input word number %d: ", i + 1);
+        scanf("%s", in[i]);
     }
-    return 0;
+
+    //check
+    for (int i = 0; i < no_words; i++)
+    {
+        if (pal(in[i]))
+        printf("'%s' is a palindrome\n", in[i]);
+    
+        else
+        printf("'%s' is not a palindrome\n", in[i]);
+    }
+
 }
 
-int pal (char* input)
+int pal (char in[100])
 {
-    char tmp [20];
-    int len = strlen (input) - 1;
-    for (int i = 0; input[i] != '\0'; i++)
+    int end = strlen(in) - 1;
+    for (int i = 0; i <= (end / 2); i++)
     {
-        tmp[len - i] = input[i];
-    }
-    
-    if (strcmp (tmp, input) == 0)
-    {
+        if (in[i] != in[end - i])
+        {
+            return 0;
+            break;
+        }
+        
+        if (i == end)
         return 1;
     }
-    
-    else
-    {
-        return 0;
-    }
-    
 }

@@ -5,6 +5,6 @@ Hi, welcome to this repo :)
 
 This is for class :(
 
-<img src="https://github.com/Cancer45/24K-1037/blob/main/LAB2/awe.jpg" alt="hehe" width="550" height="550">
+<img src="https://i.redd.it/f3iptbwir7991.png" alt="hehe" width="350" height="300">
 
 

@@ -1,7 +1,4 @@
 #include <stdio.h>
-#include <string.h>
-
-
 
 void bubble_rise (int [], int);
 

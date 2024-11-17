@@ -34,12 +34,12 @@ int main ()
     }
 }
 
-void bubble_rise (int input[], int n)
+void bubble_rise (int input[], int size)
 {
-    if (n > 1)
+    if (size > 1)
     {
         int tmp;
-        for (int i = 0; i < n - 1; i++)
+        for (int i = 0; i < size - 1; i++)
         {
             if (input[i] > input[i + 1])
             {
@@ -49,6 +49,6 @@ void bubble_rise (int input[], int n)
             }
         }
 
-        bubble_rise (input, n - 1);
+        bubble_rise (input, size - 1);
     }
 }

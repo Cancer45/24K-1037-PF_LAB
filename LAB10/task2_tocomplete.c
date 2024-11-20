@@ -8,12 +8,12 @@ typedef struct
 } point;
 
 float dist (point p[2]);
-int in_rec (point rec[4], point p);
+int in_rec (float rec[4], point p);
 
 int main ()
 {
     point p[2];
-    point rec[4];
+    float rec[4];
     
     //p1
     scanf("%f %f", &p[0].x, &p[0].y);
@@ -21,15 +21,16 @@ int main ()
     //p2
     scanf("%f %f", &p[1].x, &p[1].y);
 
-    //rec boundaries
-    for (int i = 0; i < 4; i++)
-    {   
-        printf("rectangle point %d: ", i + 1);
-        scanf("%f %f", &rec[i].x, &rec[i].y);
-    }
-
     //distance b/w the points
-    printf("%.2f", dist(p));
+    printf("%.2f\n", dist(p));
+
+    //rec boundaries
+    printf("rectangle max, min height: ");
+    scanf("%f %f", &rec[0], &rec[1]);
+
+    printf("rectangle max, min width: ");
+    scanf("%f %f", &rec[2], &rec[3]);
+
     for (int i = 0; i < 2; i++)
     {
         if (in_rec(rec, p[i]))
@@ -48,7 +49,12 @@ float dist (point p[2])
 }
 
 //define in_rec function
-int in_rec (point rec[4], point p)
+int in_rec (float rec[4], point p)
 {
+    if (p.y < rec[0] && p.y > rec[1] && p.x < rec[2] && p.x > rec[3])
+    {
+        return 1;
+    }
 
+    return 0;
 }
